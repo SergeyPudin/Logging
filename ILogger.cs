@@ -2,6 +2,6 @@
 {
     internal interface ILogger
     {
-        void WriteError();
+        void WriteError(string message);
     }
 }

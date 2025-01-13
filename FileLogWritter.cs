@@ -2,16 +2,9 @@
 {
     internal class FileLogWritter : ILogger
     {
-        private string _message;
-
-        public FileLogWritter(string message)
+        public virtual void WriteError(string message)
         {
-            _message = message;
-        }
-
-        public virtual void WriteError()
-        {
-            File.WriteAllText("log.txt", _message);
+            File.WriteAllText("log.txt", message);
         }
     }
 }

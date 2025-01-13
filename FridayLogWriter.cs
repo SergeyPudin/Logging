@@ -9,12 +9,11 @@
             _logger = logger;
         }
 
-        public void WriteError()
+        public void WriteError(string message)
         {
-            if (DateTime.Now.DayOfWeek == DayOfWeek.Monday)
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Friday)
             {
-                Console.WriteLine("FileWrited");
-                _logger.WriteError();
+                _logger.WriteError(message);
             }
         }
     }

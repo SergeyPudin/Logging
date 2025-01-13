@@ -9,9 +9,9 @@
             _logger = logger;
         }
 
-        public void Log()
+        public void Log(string message)
         {
-            _logger.WriteError();
+            _logger.WriteError(message);
         }
     }
 }
